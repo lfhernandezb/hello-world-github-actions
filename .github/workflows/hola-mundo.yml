@@ -3,19 +3,19 @@ on: [push] #evento que lo activará
 jobs:
   setup-java:
     runs-on: ubuntu-latest
-      steps:
-        - name: Setup Java JDK
-          uses: actions/setup-java@v3.12.0
-            with:
-              distribution: oracle
-              java-version: 17
-              java-package: jdk
+    steps:
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.12.0
+        with:
+          distribution: oracle
+          java-version: 17
+          java-package: jdk
   run-java:
-    runs on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - name: compila
-          run: javac HelloWorld.java
-        - name: ejecuta
-          run : java HelloWorld #bash
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: compila
+        run: javac HelloWorld.java
+      - name: ejecuta
+        run: java HelloWorld
