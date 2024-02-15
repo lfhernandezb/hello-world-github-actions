@@ -1,1 +1,11 @@
+name: hola-mundo #Nombre del workflow
+on: [push] #evento que lo activará
+jobs: #Definición de los jobs
+	hola-mundo: #Nombre del job
+		runs-on: ubuntu-latest #Maquina en la que correrá
+		steps: #Lista de steps del job hola-mundo
+			- name: compila #Nombre del step
+				run: javac HelloWorld.java
+			- name: ejecuta #Segundo step de nombre Hola mundo
+				run : java HelloWorld #bash
 
